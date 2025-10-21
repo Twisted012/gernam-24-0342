@@ -77,3 +77,4 @@ th, td {
 .table2 tr:nth-child(2) td { color: #004d26; }
 .table2 tr:nth-child(3) td { color: #00401f; }
 .table2 tr:nth-child(4) td { color: #003319; }
+
