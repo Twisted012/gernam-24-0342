@@ -3,7 +3,6 @@ body {
   font-family: "Trebuchet MS", sans-serif;
   margin: 40px;
   background-color: #f4f7fb;
-  color: #222;
   text-align: center;
 }
 
@@ -11,70 +10,90 @@ h2 {
   font-size: 28px;
   font-weight: bold;
   margin: 30px 0 15px;
+  color: #222;
 }
 
-/* === Common Table Styles === */
+/* === Table Base === */
 table {
   border-collapse: collapse;
   width: 75%;
   margin: 0 auto 50px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
   overflow: hidden;
   text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+table:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
 }
 
 th, td {
-  border: 1px solid #333;
-  padding: 12px;
-  font-size: 16px;
+  border: 3px solid #fff;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* =========================== */
-/* === TABLE 1: Fruit Prices === */
-/* =========================== */
-.table1 {
-  background-color: #fff5e6; /* Light orange table background */
-  color: #4b2800;            /* Text color */
+/* Glowing hover animation for cells */
+td:hover, th:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 10px rgba(255,255,255,0.8);
 }
 
-.table1 th {
-  background-color: #ff8800; /* Header background */
-  color: white;
-  letter-spacing: 1px;
-}
-
-/* Each row has its own color */
-.table1 tr:nth-child(2) { background-color: #ffe0b3; } /* Row 1 */
-.table1 tr:nth-child(3) { background-color: #ffd480; } /* Row 2 */
-.table1 tr:nth-child(4) { background-color: #ffcc66; } /* Row 3 */
-
-/* Change row text color slightly */
-.table1 tr:nth-child(2) td { color: #4b2800; }
-.table1 tr:nth-child(3) td { color: #3d2500; }
-.table1 tr:nth-child(4) td { color: #332100; }
-
-/* =========================== */
-/* === TABLE 2: Farm Details === */
-/* =========================== */
-.table2 {
-  background-color: #e8fff0; /* Light green table background */
-  color: #003322;            /* Text color */
-}
-
-.table2 th {
-  background-color: #009966; /* Header background */
+/* === Table 1: Fruit Prices === */
+.table1 tr:nth-child(1) {
+  background-color: #ff6b6b;
   color: #fff;
-  letter-spacing: 1px;
 }
 
-/* Each row different green shade */
-.table2 tr:nth-child(2) { background-color: #b3ffd9; } /* Row 1 */
-.table2 tr:nth-child(3) { background-color: #99ffcc; } /* Row 2 */
-.table2 tr:nth-child(4) { background-color: #80ffbf; } /* Row 3 */
+.table1 tr:nth-child(2) {
+  background-color: #ffd93d;
+  color: #333;
+}
 
-/* Text color variations */
-.table2 tr:nth-child(2) td { color: #004d26; }
-.table2 tr:nth-child(3) td { color: #00401f; }
-.table2 tr:nth-child(4) td { color: #003319; }
+.table1 tr:nth-child(3) {
+  background-color: #6bcB77;
+  color: #003300;
+}
 
+.table1 tr:nth-child(4) {
+  background-color: #4d96ff;
+  color: #fff;
+}
+
+/* === Table 2: Farm Details === */
+.table2 tr:nth-child(1) {
+  background-color: #a020f0;
+  color: #fff;
+}
+
+.table2 tr:nth-child(2) {
+  background-color: #ff7f50;
+  color: #000;
+}
+
+.table2 tr:nth-child(3) {
+  background-color: #00ced1;
+  color: #002222;
+}
+
+.table2 tr:nth-child(4) {
+  background-color: #32cd32;
+  color: #001a00;
+}
+
+/* Cube look */
+.table1 td, .table1 th,
+.table2 td, .table2 th {
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  border-radius: 12px;
+}
