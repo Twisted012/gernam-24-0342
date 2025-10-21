@@ -3,97 +3,118 @@ body {
   font-family: "Trebuchet MS", sans-serif;
   margin: 40px;
   background-color: #f4f7fb;
+  color: #222;
   text-align: center;
 }
 
 h2 {
   font-size: 28px;
   font-weight: bold;
-  margin: 30px 0 15px;
-  color: #222;
+  color: #444;
+  margin-bottom: 15px;
 }
 
-/* === Table Base === */
+/* === General Table Styling === */
 table {
+  width: 80%;
   border-collapse: collapse;
-  width: 75%;
-  margin: 0 auto 50px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
   overflow: hidden;
-  text-align: center;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 18px;
+  transition: transform 0.4s ease-in-out;
 }
 
 table:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 30px rgba(0,0,0,0.3);
 }
 
-th, td {
-  border: 3px solid #fff;
-  padding: 14px;
-  font-size: 18px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+/* === Table 1 === */
+.table1 th,
+.table1 td {
+  padding: 15px;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+  transition: all 0.4s ease;
 }
 
-/* Glowing hover animation for cells */
-td:hover, th:hover {
-  transform: scale(1.1);
-  background-color: #fff;
-  color: #000;
-  box-shadow: 0 0 10px rgba(255,255,255,0.8);
-}
-
-/* === Table 1: Fruit Prices === */
-.table1 tr:nth-child(1) {
-  background-color: #ff6b6b;
-  color: #fff;
-}
-
-.table1 tr:nth-child(2) {
-  background-color: #ffd93d;
+/* Column colors */
+.table1 th:nth-child(1),
+.table1 td:nth-child(1) {
+  background-color: #ff6f61;
+} /* coral */
+.table1 th:nth-child(2),
+.table1 td:nth-child(2) {
+  background-color: #ffa500;
+} /* orange */
+.table1 th:nth-child(3),
+.table1 td:nth-child(3) {
+  background-color: #ffd700;
   color: #333;
-}
-
-.table1 tr:nth-child(3) {
-  background-color: #6bcB77;
-  color: #003300;
-}
-
-.table1 tr:nth-child(4) {
-  background-color: #4d96ff;
-  color: #fff;
-}
-
-/* === Table 2: Farm Details === */
-.table2 tr:nth-child(1) {
-  background-color: #a020f0;
-  color: #fff;
-}
-
-.table2 tr:nth-child(2) {
-  background-color: #ff7f50;
-  color: #000;
-}
-
-.table2 tr:nth-child(3) {
-  background-color: #00ced1;
-  color: #002222;
-}
-
-.table2 tr:nth-child(4) {
+} /* gold */
+.table1 th:nth-child(4),
+.table1 td:nth-child(4) {
   background-color: #32cd32;
-  color: #001a00;
+} /* lime green */
+.table1 th:nth-child(5),
+.table1 td:nth-child(5) {
+  background-color: #1e90ff;
+} /* dodger blue */
+
+/* Hover effects for Table 1 */
+.table1 tr:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
 }
 
-/* Cube look */
-.table1 td, .table1 th,
-.table2 td, .table2 th {
-  box-shadow: 0 0 8px rgba(0,0,0,0.3);
-  border-radius: 12px;
+.table1 td:hover {
+  filter: brightness(130%);
+  transform: scale(1.1);
+  border-radius: 6px;
+}
+
+/* === Table 2 === */
+.table2 th,
+.table2 td {
+  padding: 15px;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+  transition: all 0.4s ease;
+}
+
+/* Column colors for Table 2 */
+.table2 th:nth-child(1),
+.table2 td:nth-child(1) {
+  background-color: #ff69b4;
+} /* hot pink */
+.table2 th:nth-child(2),
+.table2 td:nth-child(2) {
+  background-color: #9370db;
+} /* medium purple */
+.table2 th:nth-child(3),
+.table2 td:nth-child(3) {
+  background-color: #20b2aa;
+} /* light sea green */
+.table2 th:nth-child(4),
+.table2 td:nth-child(4) {
+  background-color: #ff8c00;
+} /* dark orange */
+.table2 th:nth-child(5),
+.table2 td:nth-child(5) {
+  background-color: #6b8e23;
+} /* olive drab */
+
+/* Hover effects for Table 2 */
+.table2 tr:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  transform: scale(1.01);
+}
+
+.table2 td:hover {
+  filter: brightness(135%);
+  transform: scale(1.1);
+  border-radius: 6px;
 }
